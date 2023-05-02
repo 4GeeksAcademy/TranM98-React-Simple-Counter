@@ -6,7 +6,26 @@ import ReactDOM from "react-dom";
 import "../styles/index.css";
 
 //import your own components
-import Home from "./component/home.jsx";
+
+
+import clockImage from "../img/clock.png";
+
+
+
+//import your own components
+import SecondsCounter from "./component/home.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+const App = () => {
+    const [seconds, setSeconds] = useState(0);
+  
+    return (
+      <SecondsCounter seconds={seconds} />
+    );
+  };
+  
+
+
+//render your react application
+ReactDOM.render(<SecondsCounter seconds={0} />, document.querySelector("#app"));
+;
